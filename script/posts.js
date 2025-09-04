@@ -46,14 +46,26 @@ function getPosts(){
                 <hr class="p-2 text-2xs text-gray-400">
                 <!--// POST CONTENT //-->
                 <div>
-                  <span class="text-gray-300"><span>(${commantsCount})</span> comments</span>
+                  <span class="text-gray-300" ><span>(${commantsCount}) comments <span class="bg-gray-500 text-gray-100 rounded-full p-2 text-xs" id ="tags-${obj.id}">policy</span> </span>
                 </div>
               </div>
             </div>
           </DIV>
             `
 
+            let tagId = `tags-${obj.id}`
             document.getElementById("posts").innerHTML += post
+            document.getElementById(tagId).style.display = "none"
+            if (obj.tags.length != 0){
+              for(let tag of obj.tags){
+              console.log(tag.name)
+              let tagContent = `
+                <span class="bg-gray-500 text-gray-100 rounded-full p-2 text-xs" id ="">${tag.name}</span>
+              `
+              document.getElementById(tagId).innerHTML += tagContent
+            }
+            }
+            
         }
         
     })

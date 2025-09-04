@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- INSERT SCRIPT & STYLES -->
+    <!-- INSERT SCRIPT & STYLES -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="./node_modules/axios/dist/axios.min.js"></script>
     
-    <title>Document</title>
+    <title>Tarmeez fainal project</title>
 </head>
 <body class="bg-gray-800">
   <!-- NAVBAR -->
@@ -44,7 +44,7 @@
           <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <button
               class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800 cursor-pointer"
-              onclick="changeLoc ()"
+              onclick="logOutPtnClicked()"
               >
               <span
                 class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-transparent group-hover:dark:bg-transparent">
@@ -80,7 +80,7 @@
           </el-disclosure>
     </nav>
   <!-- // NAVBAR // -->
-   <div class="grid grid-cols-8 gap-4 m-auto"> 
+  <div class="grid grid-cols-8 gap-4 m-auto"> 
         <div class="rslider text-gray-50 bg-gray-800/50 col-span-2">weuirtuiqwet</div>
         <!-- POSTS -->
         <div id="posts" class="posts bg-gray-800 col-span-4 ">
@@ -115,7 +115,10 @@
                 <hr class="p-2 text-2xs text-gray-400">
                 <!--// POST CONTENT //-->
                 <div>
-                  <span class="text-gray-300"><span>(3)</span> comments</span>
+                  <span class="text-gray-300"><span>(3)</span> comments
+                    <span class="bg-gray-500 text-gray-100 rounded-full w-15">policy</span>
+                  </span>
+
                 </div>
               </div>
             </div>
@@ -125,13 +128,9 @@
         </div>
         <!-- // POSTS // -->
         <div class="lslider  bg-gray-800/50 text-gray-50 col-span-2"> weoi  </div>
-   </div>
+  </div>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script type="module" src="./script/posts.js"></script>
-<script>
-  function changeLoc (){
-    window.location.href = "./auth.html"
-  }
-</script>   
+<script src="./script/posts.js"></script>
+<script src="./script/auth.js"></script>
 </body>
 </html>
